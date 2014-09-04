@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="PCN-wK-mE5">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Tela Splash-->
+        <scene sceneID="4fP-s3-cv5">
+            <objects>
+                <viewController id="PCN-wK-mE5" customClass="TelaSplash" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="83u-Zh-1lf"/>
+                        <viewControllerLayoutGuide type="bottom" id="fR0-Id-DIb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ztO-Zv-FUZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Splashscreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zeh-M7-uNy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pHs-hf-JFl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-192" y="-403"/>
+        </scene>
+        <!--Tela Inicial View Controller-->
+        <scene sceneID="0sW-it-8c1">
+            <objects>
+                <viewController storyboardIdentifier="telaInicial" id="GM0-Cn-Dx5" customClass="TelaInicialViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0YL-LZ-e0b"/>
+                        <viewControllerLayoutGuide type="bottom" id="EEX-Ug-evP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UPd-k7-Ymv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="inicio.png" translatesAutoresizingMaskIntoConstraints="NO" id="XFs-qV-K2q">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4G-mJ-4Sz">
+                                <rect key="frame" x="15" y="494" width="290" height="59"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="entrarNaFila" destination="GM0-Cn-Dx5" eventType="touchUpInside" id="Bg7-6M-7Ty"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="169" placeholderIntrinsicHeight="120" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1KF-Db-Xeo">
+                                <rect key="frame" x="15" y="224" width="290" height="120"/>
+                                <color key="textColor" red="0.99215692280000001" green="0.61960786580000005" blue="0.2196078598" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EFd-Gh-ow3"/>
+                    <connections>
+                        <outlet property="senhaTextField" destination="1KF-Db-Xeo" id="9N0-pu-Bt3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LRL-hB-dvD" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="208" y="-403"/>
+        </scene>
+        <!--Tela Espera View Controller-->
+        <scene sceneID="9ic-Ub-gfB">
+            <objects>
+                <viewController storyboardIdentifier="telaEspera" id="WVG-pJ-PLT" customClass="TelaEsperaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hqN-u8-zTm"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xb7-FB-MTu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="epF-F0-7pH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fila.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZMQ-3I-6K7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2K-mb-lUO">
+                                <rect key="frame" x="15" y="499" width="290" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelarFila" destination="WVG-pJ-PLT" eventType="touchUpInside" id="PgE-Ei-VAY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="50min" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2Z-ir-6p9">
+                                <rect key="frame" x="215" y="398" width="105" height="40"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="21"/>
+                                <color key="textColor" red="0.32156863810000003" green="0.32156863810000003" blue="0.32156863810000003" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bX-ui-VMx">
+                                <rect key="frame" x="81" y="398" width="62" height="44"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="30"/>
+                                <color key="textColor" red="0.32156863808631897" green="0.32156863808631897" blue="0.32156863808631897" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0148" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k27-TX-YRf">
+                                <rect key="frame" x="15" y="224" width="290" height="120"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
+                                <color key="textColor" red="0.99215692281723022" green="0.61960786581039429" blue="0.21960785984992981" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="j7i-dc-Paw"/>
+                    <connections>
+                        <outlet property="pessoasLabel" destination="4bX-ui-VMx" id="x1O-KO-UXr"/>
+                        <outlet property="senhaLabel" destination="k27-TX-YRf" id="Fpj-1Z-saL"/>
+                        <outlet property="tempoLabel" destination="v2Z-ir-6p9" id="ikM-AV-JcW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2NP-ao-4eW" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="563" y="-403"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iR1-1A-ohd">
+            <objects>
+                <viewController storyboardIdentifier="telaSuaVez" id="lxN-vb-w5I" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lmd-iG-kgd"/>
+                        <viewControllerLayoutGuide type="bottom" id="sQR-rF-T5L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jmr-HR-dtE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="suavez.png" translatesAutoresizingMaskIntoConstraints="NO" id="fwF-5Y-ws8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0148" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tir-Ms-5NQ">
+                                <rect key="frame" x="15" y="20" width="290" height="120"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
+                                <color key="textColor" red="0.99215692280000001" green="0.61960786580000005" blue="0.2196078598" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f2e-kZ-0ii" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="894" y="-403"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Splashscreen.png" width="320" height="568"/>
+        <image name="fila.png" width="320" height="568"/>
+        <image name="inicio.png" width="320" height="568"/>
+        <image name="suavez.png" width="320" height="568"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
