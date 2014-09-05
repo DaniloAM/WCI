@@ -19,6 +19,8 @@
     
     [self checaMudancaFila];
     
+    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -103,7 +105,7 @@
     [self atualizaTela];
     
     if([fila suaVez] || [fila numeroPessoasNaFrente] == 0) {
-        [self performSelector:@selector(mudaTelaSuaVez) withObject:nil afterDelay:6.0f];
+        [self performSelector:@selector(mudaTelaSuaVez) withObject:nil afterDelay:3.0f];
     }
     
     else {

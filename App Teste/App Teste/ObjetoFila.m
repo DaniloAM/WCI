@@ -85,13 +85,6 @@
 
 -(void)executaAlarmeSuaVez {
     
-    NSURL *sound = [[NSBundle mainBundle] URLForResource:@"blop" withExtension:@"mp3"];
-    [self setAlarmPlayer:[[AVAudioPlayer alloc] initWithContentsOfURL:sound error:nil]];
-    [[self alarmPlayer] setNumberOfLoops:5];
-    [[self alarmPlayer]setVolume:1];
-    [[self alarmPlayer] prepareToPlay];
-    [[self alarmPlayer] play];
-    
     [self setSuaVez:true];
     
 }

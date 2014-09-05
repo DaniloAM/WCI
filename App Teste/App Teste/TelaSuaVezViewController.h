@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 #import "ObjetoFila.h"
+
 
 @interface TelaSuaVezViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *senhaLabel;
+@property AVAudioPlayer  *alarmPlayer;
 
 @end
