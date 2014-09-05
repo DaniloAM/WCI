@@ -53,6 +53,12 @@
     
     antigo_numero = atendente_geral + atendente_caixa;
     
+    delay(500);
+    
+    //send_guiche();
+    
+    delay(200);
+    
   }
   
   //---------------------------------------------
@@ -61,6 +67,7 @@
   
   
 void checa_botao() {
+  
   int valor = analogRead(leitura_botao);
   
   if(valor > 1000 && digitalRead(caixa1)) {
@@ -120,7 +127,7 @@ void checa_botao() {
 
  void mantem_botao(int minimo, int maximo) {
    
-   Serial.println(botao_pressionado);
+   Serial.print(botao_pressionado);
    
    while(analogRead(leitura_botao) > minimo && analogRead(leitura_botao) < maximo)  {
          
@@ -262,7 +269,44 @@ void conta_atendentes() {
     
   }
   
-  
+//  void send_guiche() {
+//     
+//     Serial.print('a');
+//     delay(20);
+//     Serial.print(digitalRead(atd6));
+//     delay(20);
+//     Serial.print('b');
+//     delay(20);
+//     Serial.print(digitalRead(atd5));
+//     delay(20);
+//     Serial.print('c');
+//     delay(20);
+//     Serial.print(digitalRead(atd4));
+//     delay(20);
+//     Serial.print('d');
+//     delay(20);
+//     Serial.print(digitalRead(atd3));
+//     delay(20);
+//     Serial.print('e');
+//     delay(20);
+//     Serial.print(digitalRead(atd2));
+//     delay(20);
+//     Serial.print('f');
+//     delay(20);
+//     Serial.print(digitalRead(atd1));
+//     delay(20);
+//     Serial.print('g');
+//     delay(20);
+//     Serial.print(digitalRead(caixa2));
+//     delay(20);
+//     Serial.print('h');
+//     delay(20);
+//     Serial.print(digitalRead(caixa1));
+//     delay(20);
+//     Serial.println('x');
+//     delay(20);
+//    
+//  }
   
   //---------------------------------------------
   // void loop
@@ -275,9 +319,10 @@ void loop() {
     int total = atendente_geral + atendente_caixa;
     
     if(total != antigo_numero) {
+      delay(100);
       antigo_numero = total;
       total = - total;
-      Serial.println(total);
+     // send_guiche();
     }
     
     if(analogRead(leitura_botao) > 100) {
@@ -287,5 +332,3 @@ void loop() {
     delay(50);
     
  }
- 
- 

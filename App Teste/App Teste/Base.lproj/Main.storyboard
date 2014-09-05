@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="PCN-wK-mE5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="PCN-wK-mE5">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
         <!--Tela Splash-->
@@ -25,7 +25,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pHs-hf-JFl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-192" y="-403"/>
+            <point key="canvasLocation" x="-195" y="-402"/>
         </scene>
         <!--Tela Inicial View Controller-->
         <scene sceneID="0sW-it-8c1">
@@ -99,7 +99,7 @@
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="50min" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2Z-ir-6p9">
                                 <rect key="frame" x="215" y="398" width="105" height="40"/>
-                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                 <color key="textColor" red="0.32156863810000003" green="0.32156863810000003" blue="0.32156863810000003" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -129,10 +129,10 @@
             </objects>
             <point key="canvasLocation" x="563" y="-403"/>
         </scene>
-        <!--View Controller-->
+        <!--Tela Sua Vez View Controller-->
         <scene sceneID="iR1-1A-ohd">
             <objects>
-                <viewController storyboardIdentifier="telaSuaVez" id="lxN-vb-w5I" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="telaSuaVez" id="lxN-vb-w5I" customClass="TelaSuaVezViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lmd-iG-kgd"/>
                         <viewControllerLayoutGuide type="bottom" id="sQR-rF-T5L"/>
@@ -153,6 +153,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="senhaLabel" destination="Tir-Ms-5NQ" id="LYF-vJ-DtT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f2e-kZ-0ii" sceneMemberID="firstResponder"/>
             </objects>

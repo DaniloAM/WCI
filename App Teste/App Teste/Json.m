@@ -12,8 +12,6 @@
 
 -(int)retornaMediaTempo {
     
-    //Mudar a key para a projetada pelo php
-    
     ObjetoFila *fila = [ObjetoFila alloc];
     
     NSString *url = [NSString stringWithFormat:@"http://172.246.16.27/danilo/usaBanco.php?tipofuncao=tempomedio&id_fila=%d", [fila senhaUsuario]];
@@ -33,9 +31,15 @@
     NSString *str = [[array objectAtIndex:0] objectForKey:@"tempomedio"];
     
     
-    NSString *str2 = [str substringWithRange:NSMakeRange(3, 2)];
+    NSString *strMinutos = [str substringWithRange:NSMakeRange(3, 2)];
+    NSString *strSegundos = [str substringWithRange:NSMakeRange(6, 2)];
     
-    int tempo = [str2 intValue];
+    int tempoMin = [strMinutos intValue];
+    int tempoSeg = [strSegundos intValue];
+    
+    int totalSeg = tempoSeg + (tempoMin * 60);
+    
+    totalSeg *= [fila numeroPessoasNaFrente];
     
     NSString *url2 = [NSString stringWithFormat:@"http://172.246.16.27/danilo/usaBanco.php?tipofuncao=numguiches&id_fila=%d", [fila senhaUsuario]];
     
@@ -53,7 +57,12 @@
     
     NSString *str3 = [[array2 objectAtIndex:0] objectForKey:@"guiche"];
     
-    return tempo / [str3 intValue];
+    totalSeg = totalSeg / [str3 intValue];
+    
+    tempoMin = totalSeg / 60;
+    tempoSeg = totalSeg % 60;
+    
+    return ((tempoMin * 100) + tempoSeg);
     
 }
 
@@ -61,7 +70,6 @@
     
     ObjetoFila *fila = [ObjetoFila alloc];
     
-    //Ajeitar URL
     NSString *url = [NSString stringWithFormat:@"http://172.246.16.27/danilo/usaBanco.php?tipofuncao=localfila&id_fila=%d", [fila senhaUsuario]];
     
     

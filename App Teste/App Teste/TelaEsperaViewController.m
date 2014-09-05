@@ -14,6 +14,13 @@
 
 @implementation TelaEsperaViewController
 
+-(void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self checaMudancaFila];
+    
+}
+
 -(void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
@@ -51,13 +58,18 @@
     
     Json *jsonObject = [[Json alloc] init];
     
-    int min = [jsonObject retornaMediaTempo];
+    int aux = [jsonObject retornaMediaTempo];
+    
+    int min = aux / 100;
     int hrs = min / 60;
+    int seg = aux - (min * 100);
     
     min = min % 60;
-    
-    min *= [[self filaUsuario] numeroPessoasNaFrente];
 
+    if(min <= 0 && seg > 1) {
+        min = 1;
+    }
+    
     NSString *str = [NSString stringWithFormat:@"%dh %dmin", hrs, min];
     
     [[self tempoLabel] setText:str];
@@ -67,7 +79,6 @@
 }
 
 -(void)mudaTelaSuaVez {
-    
     [self mudarTela:@"telaSuaVez"];
 }
 
@@ -91,12 +102,12 @@
     
     [self atualizaTela];
     
-    if([fila suaVez]) {
-        [self mudaTelaSuaVez];
+    if([fila suaVez] || [fila numeroPessoasNaFrente] == 0) {
+        [self performSelector:@selector(mudaTelaSuaVez) withObject:nil afterDelay:6.0f];
     }
     
     else {
-        [self performSelector:@selector(checaMudancaFila) withObject:nil afterDelay:60.0f];
+        [self performSelector:@selector(checaMudancaFila) withObject:nil afterDelay:20.0f];
     }
     
 }
@@ -120,45 +131,6 @@
     }
     
 }
-
-//-(IBAction)buttonForVideo {
-//    _video++;
-//    
-//    if(_video > 5) {
-//        _video = 1;
-//    }
-//    
-//    switch (_video) {
-//        case 1:
-//            [[self pessoasLabel] setText:@"6"];
-//            [[self tempoLabel] setText:@"1h45min"];
-//            break;
-//        case 2:
-//            [[self pessoasLabel] setText:@"5"];
-//            [[self tempoLabel] setText:@"1h25min"];
-//            break;
-//        case 3:
-//            [[self pessoasLabel] setText:@"4"];
-//            [[self tempoLabel] setText:@"50min"];
-//            break;
-//        case 4:
-//            [[self pessoasLabel] setText:@"3"];
-//            [[self tempoLabel] setText:@"40min"];
-//            break;
-//        case 5:
-//            [[self pessoasLabel] setText:@"2"];
-//            [[self tempoLabel] setText:@"20min"];
-//            break;
-//        default:
-//            break;
-//    }
-//    
-//    
-//}
-
-//-(IBAction)buttonForVideo2 {
-//    [self executaAlarmeSuaVez];
-//}
 
 
 @end

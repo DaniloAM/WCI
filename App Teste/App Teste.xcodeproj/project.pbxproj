@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FF1596D319B8987E00D9236F /* Json.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1596D219B8987E00D9236F /* Json.m */; };
+		FF1596D619B9DC0600D9236F /* TelaSuaVezViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1596D519B9DC0600D9236F /* TelaSuaVezViewController.m */; };
 		FF17BCE019B8B9B300B5EF46 /* 80.png in Resources */ = {isa = PBXBuildFile; fileRef = FF17BCDD19B8B9B300B5EF46 /* 80.png */; };
 		FF17BCE119B8B9B300B5EF46 /* 120.png in Resources */ = {isa = PBXBuildFile; fileRef = FF17BCDE19B8B9B300B5EF46 /* 120.png */; };
 		FF17BCE219B8B9B300B5EF46 /* 58.png in Resources */ = {isa = PBXBuildFile; fileRef = FF17BCDF19B8B9B300B5EF46 /* 58.png */; };
@@ -18,7 +19,6 @@
 		FF31159F19B5E3FC00B7B0CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF31159E19B5E3FC00B7B0CF /* main.m */; };
 		FF3115A319B5E3FC00B7B0CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF3115A219B5E3FC00B7B0CF /* AppDelegate.m */; };
 		FF3115A619B5E3FC00B7B0CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF3115A419B5E3FC00B7B0CF /* Main.storyboard */; };
-		FF3115A919B5E3FC00B7B0CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF3115A819B5E3FC00B7B0CF /* ViewController.m */; };
 		FF3115AB19B5E3FC00B7B0CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF3115AA19B5E3FC00B7B0CF /* Images.xcassets */; };
 		FF3115B219B5E3FC00B7B0CF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF3115B119B5E3FC00B7B0CF /* XCTest.framework */; };
 		FF3115B319B5E3FC00B7B0CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF31159219B5E3FC00B7B0CF /* Foundation.framework */; };
@@ -49,6 +49,8 @@
 /* Begin PBXFileReference section */
 		FF1596D119B8987E00D9236F /* Json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Json.h; sourceTree = "<group>"; };
 		FF1596D219B8987E00D9236F /* Json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Json.m; sourceTree = "<group>"; };
+		FF1596D419B9DC0600D9236F /* TelaSuaVezViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TelaSuaVezViewController.h; sourceTree = "<group>"; };
+		FF1596D519B9DC0600D9236F /* TelaSuaVezViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TelaSuaVezViewController.m; sourceTree = "<group>"; };
 		FF17BCDD19B8B9B300B5EF46 /* 80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 80.png; sourceTree = "<group>"; };
 		FF17BCDE19B8B9B300B5EF46 /* 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 120.png; sourceTree = "<group>"; };
 		FF17BCDF19B8B9B300B5EF46 /* 58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 58.png; sourceTree = "<group>"; };
@@ -63,8 +65,6 @@
 		FF3115A119B5E3FC00B7B0CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FF3115A219B5E3FC00B7B0CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FF3115A519B5E3FC00B7B0CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FF3115A719B5E3FC00B7B0CF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FF3115A819B5E3FC00B7B0CF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FF3115AA19B5E3FC00B7B0CF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FF3115B019B5E3FC00B7B0CF /* App TesteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "App TesteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3115B119B5E3FC00B7B0CF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -152,12 +152,12 @@
 				FF1596D219B8987E00D9236F /* Json.m */,
 				FFCEF74319B75B1A00C546FD /* TelaSplash.h */,
 				FFCEF74419B75B1A00C546FD /* TelaSplash.m */,
-				FF3115A719B5E3FC00B7B0CF /* ViewController.h */,
-				FF3115A819B5E3FC00B7B0CF /* ViewController.m */,
 				FF3115CD19B6544900B7B0CF /* TelaInicialViewController.h */,
 				FF3115CE19B6544900B7B0CF /* TelaInicialViewController.m */,
 				FFDBF7EA19B65F4C00E8A5C2 /* TelaEsperaViewController.h */,
 				FFDBF7EB19B65F4C00E8A5C2 /* TelaEsperaViewController.m */,
+				FF1596D419B9DC0600D9236F /* TelaSuaVezViewController.h */,
+				FF1596D519B9DC0600D9236F /* TelaSuaVezViewController.m */,
 				FF3115CA19B6495600B7B0CF /* ObjetoFila.h */,
 				FF3115CB19B6495600B7B0CF /* ObjetoFila.m */,
 				FF3115AA19B5E3FC00B7B0CF /* Images.xcassets */,
@@ -323,9 +323,9 @@
 			files = (
 				FFCEF74519B75B1A00C546FD /* TelaSplash.m in Sources */,
 				FF3115CF19B6544900B7B0CF /* TelaInicialViewController.m in Sources */,
-				FF3115A919B5E3FC00B7B0CF /* ViewController.m in Sources */,
 				FFDBF7EC19B65F4C00E8A5C2 /* TelaEsperaViewController.m in Sources */,
 				FF3115A319B5E3FC00B7B0CF /* AppDelegate.m in Sources */,
+				FF1596D619B9DC0600D9236F /* TelaSuaVezViewController.m in Sources */,
 				FF3115CC19B6495600B7B0CF /* ObjetoFila.m in Sources */,
 				FF31159F19B5E3FC00B7B0CF /* main.m in Sources */,
 				FF1596D319B8987E00D9236F /* Json.m in Sources */,

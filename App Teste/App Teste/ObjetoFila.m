@@ -26,10 +26,12 @@
     int aux = [self verificaNecessidadeAlarme];
     
     if(aux == 1) {
+        [self executaAlarmePerto];
         //alerta perto
     }
     
     else if(aux == 2) {
+        [self executaAlarmeSuaVez];
         //alerta sua vez
     }
     
@@ -79,10 +81,6 @@
     [[self alarmPlayer] prepareToPlay];
     [[self alarmPlayer] play];
     
-    
-    //Teste
-    //[self performSelector:@selector(executaAlarmePerto) withObject:nil afterDelay:10.0];
-    //Teste
 }
 
 -(void)executaAlarmeSuaVez {
